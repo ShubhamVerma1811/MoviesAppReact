@@ -1,0 +1,41 @@
+.searchContainer {
+  background-color: white;
+  position: absolute;
+  border: 3px solid red;
+  width: 100%;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+form {
+  input {
+    width: 100%;
+    font-family: "Poppins";
+    padding: 10px;
+  }
+}
+
+.searchDropDownContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10px, 1fr));
+}
+
+.searchDropDown {
+  border: 3px solid violet;
+  width: max-content;
+
+  .searchInfo {
+    width: 100%;
+  }
+
+  h3,
+  p {
+    width: max-content;
+  }
+
+  img {
+    width: 30%;
+  }
+}
