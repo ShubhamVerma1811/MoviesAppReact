@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/NowPlaying/NowPlaying.css";
+import { Link } from "react-router-dom";
 
 function NowPlaying() {
   const [nowPlaying, setNowPlaying] = useState([]);
@@ -9,6 +10,7 @@ function NowPlaying() {
     )
       .then((res) => res.json())
       .then((data) => setNowPlaying([...nowPlaying, data.results]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (nowPlaying.length > 0) {
@@ -19,15 +21,17 @@ function NowPlaying() {
         </center>
         <div className="nowContainer">
           {nowPlaying[0].map((item) => (
-            <div key={item.id} className="nowCard">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                alt="pic"
-              />
-              <h2>{item.title} </h2>
-              <p> {item.release_date} </p>
-              <p>{item.overview.substring(0, 100)}...</p>
-            </div>
+            <Link key={item.id} to={`/movies/${item.id}`}>
+              <div className="nowCard">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                  alt="pic"
+                />
+                <h2>{item.title} </h2>
+                <p> {item.release_date} </p>
+                <p>{item.overview.substring(0, 100)}...</p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
