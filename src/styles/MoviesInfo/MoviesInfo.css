@@ -1,0 +1,44 @@
+.movieContainer {
+  margin: 80px 170px;
+  margin-bottom: 0px;
+}
+
+.movieContainer button {
+  border: 2px solid black;
+  font-family: "Poppins";
+  padding: 20px;
+  font-size: 18px;
+}
+
+.movieContainer button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.movieContent {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 15px grey;
+          box-shadow: 3px 3px 15px grey;
+  padding: 40px;
+}
+
+.movieContent h1 {
+  display: inline;
+}
+
+.movieContent img {
+  width: 60%;
+}
+
+.movieContent p {
+  font-size: 16px;
+  width: 500px;
+}
+/*# sourceMappingURL=MoviesInfo.css.map */

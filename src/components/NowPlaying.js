@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../styles/NowPlaying/NowPlaying.css";
 import { Link } from "react-router-dom";
+import "../styles/NowPlaying/NowPlaying.css";
 
 function NowPlaying() {
   const [nowPlaying, setNowPlaying] = useState([]);

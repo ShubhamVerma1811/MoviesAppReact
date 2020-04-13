@@ -29,6 +29,7 @@ body {
   text-align: center;
   -webkit-box-shadow: 3px 3px 15px grey;
           box-shadow: 3px 3px 15px grey;
+  padding-bottom: 20px;
 }
 
 .nowCard h2 {
@@ -39,7 +40,7 @@ body {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.3px;
-  margin: 20px 20px;
+  margin: 0px 20px;
 }
 
 .nowCard:hover {

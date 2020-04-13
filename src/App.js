@@ -9,7 +9,7 @@ function App() {
     <div>
       <SearchBox />
       <Router>
-        <NowPlaying />
+        <Route path="/" exact component={NowPlaying} />
         <Route path="/movies/:id" component={MoviesInfo}></Route>
       </Router>
     </div>
