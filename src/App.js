@@ -1,8 +1,8 @@
 import React from "react";
+import { HashRouter as Router, Route } from "react-router-dom";
+import MoviesInfo from "./components/MoviesInfo";
 import NowPlaying from "./components/NowPlaying";
 import SearchBox from "./components/SearchBox";
-import MoviesInfo from "./components/MoviesInfo";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (

@@ -23,7 +23,7 @@ function MoviesInfo({ match }) {
 
   return (
     <div className="movieContainer">
-      <a href="/">
+      <a href="/Movies-App-React/#/">
         <button> &#8592; Go Back</button>
       </a>
       <div className="movieContent">
