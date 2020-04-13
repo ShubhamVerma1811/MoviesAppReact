@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NowPlaying/NowPlaying.css";
+import SearchBox from "./SearchBox";
 
 function NowPlaying() {
   const [nowPlaying, setNowPlaying] = useState([]);
@@ -15,26 +16,30 @@ function NowPlaying() {
 
   if (nowPlaying.length > 0) {
     return (
-      <div className="nowPlaying">
-        <center>
-          <h1>Now Playing</h1>
-        </center>
-        <div className="nowContainer">
-          {nowPlaying[0].map((item) => (
-            <Link key={item.id} to={`/movies/${item.id}`}>
-              <div className="nowCard">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                  alt="pic"
-                />
-                <h2>{item.title} </h2>
-                <p> {item.release_date} </p>
-                <p>{item.overview.substring(0, 100)}...</p>
-              </div>
-            </Link>
-          ))}
+      <>
+        <SearchBox />
+
+        <div className="nowPlaying">
+          <center>
+            <h1>Now Playing</h1>
+          </center>
+          <div className="nowContainer">
+            {nowPlaying[0].map((item) => (
+              <Link key={item.id} to={`/movies/${item.id}`}>
+                <div className="nowCard">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                    alt="pic"
+                  />
+                  <h2>{item.title} </h2>
+                  <p> Release Date : {item.release_date} </p>
+                  <p>{item.overview.substring(0, 100)}...</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      </>
     );
   } else {
     return <h1>Loading..</h1>;

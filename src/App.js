@@ -7,7 +7,6 @@ import SearchBox from "./components/SearchBox";
 function App() {
   return (
     <div>
-      <SearchBox />
       <Router>
         <Route path="/" exact component={NowPlaying} />
         <Route path="/movies/:id" component={MoviesInfo}></Route>

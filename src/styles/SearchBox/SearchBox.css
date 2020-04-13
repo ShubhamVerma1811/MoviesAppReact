@@ -1,7 +1,7 @@
 .searchContainer {
   background-color: white;
   position: absolute;
-  border: 3px solid red;
+  overflow: hidden;
   width: 100%;
   margin: auto auto;
   left: 0;
@@ -10,27 +10,23 @@
 }
 
 form input {
-  width: 100%;
+  width: 90%;
   font-family: "Poppins";
-  padding: 10px;
-}
-
-.searchDropDownContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(10px, 1fr))[4];
-      grid-template-columns: repeat(4, minmax(10px, 1fr));
+  padding: 10px 0px 10px 20px;
+  border: none;
+  border-bottom: 3px solid black;
 }
 
 .searchDropDown {
-  border: 3px solid violet;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  border-bottom: 2px solid grey;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+  padding-left: 20px;
 }
 
-.searchDropDown .searchInfo {
-  width: 100%;
+.searchDropDown a {
+  text-decoration: none;
+  color: black;
 }
 
 .searchDropDown h3,
@@ -38,6 +34,16 @@ form input {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.searchDropDown h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.searchDropDown p {
+  margin: 0;
+  font-size: 14px;
 }
 
 .searchDropDown img {

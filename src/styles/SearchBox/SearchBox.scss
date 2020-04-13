@@ -1,7 +1,8 @@
 .searchContainer {
   background-color: white;
   position: absolute;
-  border: 3px solid red;
+  // border: 3px solid red;
+  overflow: hidden;
   width: 100%;
   margin: auto auto;
   left: 0;
@@ -11,23 +12,23 @@
 
 form {
   input {
-    width: 100%;
+    width: 90%;
     font-family: "Poppins";
-    padding: 10px;
+    padding: 10px 0px 10px 20px;
+    border: none;
+    border-bottom: 3px solid black;
   }
 }
 
-.searchDropDownContainer {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(10px, 1fr));
-}
-
 .searchDropDown {
-  border: 3px solid violet;
-  width: max-content;
+  border-bottom: 2px solid grey;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+  padding-left: 20px;
 
-  .searchInfo {
-    width: 100%;
+  a {
+    text-decoration: none;
+    color: black;
   }
 
   h3,
@@ -35,7 +36,27 @@ form {
     width: max-content;
   }
 
+  h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
   img {
     width: 30%;
   }
 }
+
+// @media screen and (max-width: 825px) {
+//   .searchContainer {
+//     width: 20%
+//   }
+
+//   input {
+//     width: 20%;
+//   }
+// }

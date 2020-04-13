@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/SearchBox/SearchBox.css";
 
 function SearchBox() {
@@ -24,7 +25,7 @@ function SearchBox() {
       );
       const receivedData = await response.json();
       setRes(receivedData.total_results);
-      setData(receivedData.results);
+      setData(receivedData.results.splice(0, 5));
     } catch (e) {
       console.log(e);
     }
@@ -46,14 +47,12 @@ function SearchBox() {
         {data !== undefined && res > 0 ? (
           data.map((item) => (
             <div key={item.id} className="searchDropDown">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                alt="pic-not-found"
-              />
-              <div className="searchInfo">
-                <h3> {item.title}</h3>
-                <p>{item.release_date} </p>
-              </div>
+              <Link to={`/movies/${item.id}`}>
+                <div className="searchInfo">
+                  <h3> {item.title}</h3>
+                  <p>{item.release_date} </p>
+                </div>
+              </Link>
             </div>
           ))
         ) : res === 0 ? (
